@@ -31,6 +31,10 @@
             }
         }
 
+        public Map()
+        {
+        }
+
         // Returns the type of room at a specific location -> returns a Wall RoomType if the location is off the map
         public RoomType GetRoomTypeAtLocation(Location location) => GetRoomAtLocation(location).Type;
 
