@@ -108,6 +108,9 @@
             Location minotaurLocation = ProceduralGenerator.GetRandomLocation();
             Room room = map.GetRoomAtLocation(minotaurLocation);
             room.AddMonster(new Minotaur());
+            BigBoss bb = new BigBoss();
+            room.AddMonster(bb);
         }
+
     }
 }

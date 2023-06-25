@@ -1,4 +1,6 @@
-﻿namespace MinotaurLabyrinth
+﻿using System;
+
+namespace MinotaurLabyrinth
 {
     /// <summary>
     /// Represents a pit room, which contains a dangerous pit that the hero can fall into.
@@ -29,7 +31,7 @@
 
                 if (hero.HasSword)
                 {
-                    ConsoleHelper.WriteLine("The sword goes flying as your wildly flail your arms desperately trying to get hold of the pit's edge.", ConsoleColor.DarkMagenta);
+                    ConsoleHelper.WriteLine("The sword goes flying as you wildly flail your arms desperately trying to get hold of the pit's edge.", ConsoleColor.DarkMagenta);
                     hero.HasSword = false;
                 }
                 else
@@ -41,7 +43,7 @@
                 {
                     IsActive = false;
                     ConsoleHelper.WriteLine("You manage to grab the side of the pit and pull yourself onto safe ground", ConsoleColor.Green);
-                    ConsoleHelper.WriteLine("Looking around, you find a mechanism that closes the depresses the spikes in the pit. This room is now safe.", ConsoleColor.Green);
+                    ConsoleHelper.WriteLine("Looking around, you find a mechanism that closes the spikes in the pit. This room is now safe.", ConsoleColor.Green);
                 }
                 else
                 {
@@ -74,13 +76,13 @@
                 }
                 if (heroDistance == 0)
                 {
-                    ConsoleHelper.WriteLine("You shudder as you recall your near death experience with the now defunct pit in this room.", ConsoleColor.DarkGray);
+                    ConsoleHelper.WriteLine("You shudder as you recall your near-death experience with the now-defunct pit in this room.", ConsoleColor.DarkGray);
                     return true;
                 }
             }
             else if (heroDistance == 1 || heroDistance == 2)
             {
-                ConsoleHelper.WriteLine(heroDistance == 1 ? "You feel a draft. There is a pit in a nearby room!" : "Your intuition tells you that something dangerous is nearby", ConsoleColor.DarkGray);
+                ConsoleHelper.WriteLine(heroDistance == 1 ? "You feel a draft. There is a pit in a nearby room!" : "Your intuition tells you that something dangerous is nearby.", ConsoleColor.DarkGray);
                 return true;
             }
             return false;
